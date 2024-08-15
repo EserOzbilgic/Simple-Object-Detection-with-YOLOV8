@@ -7,7 +7,7 @@ model = YOLO('yolov8n.pt')
 cap = cv2.VideoCapture(0)
 
 if not cap.isOpened():
-    print("Kameradan görüntü gelmiyor...")
+    print("There is no image from the camera...")
 
 bounding_box_annotator = sv.BoundingBoxAnnotator()
 label_annotator = sv.LabelAnnotator()
@@ -31,7 +31,7 @@ while True:
     k = cv2.waitKey(1)
 
     if k % 256 == 27:
-        print("Esc tuşuna basıldı.. Kapatılıyor..")
+        print("Esc key pressed.. Closing..")
         break
 
 cap.release()
